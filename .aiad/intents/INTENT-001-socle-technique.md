@@ -58,4 +58,4 @@ L'implémentation dérive si :
 
 ## SPECs liées
 
-- [ ] [À créer via /sdd-spec]
+- [ ] [SPEC-001 — Schéma DB 24 tables Drizzle](../specs/SPEC-001-schema-db.md)

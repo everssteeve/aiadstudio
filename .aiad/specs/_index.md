@@ -6,7 +6,7 @@
 
 | ID | Titre | Intent parent | SQS | Statut | PR |
 |----|-------|---------------|-----|--------|----|
-| | | | | | |
+| [SPEC-001](SPEC-001-schema-db.md) | Schéma DB — 24 tables Drizzle | INTENT-001 | 4/5 ✓ | done | — |
 
 ## Statuts possibles
 

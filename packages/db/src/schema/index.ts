@@ -1,2 +1,10 @@
-// Database schema definitions (Drizzle ORM)
-// TODO: define tables
+export * from './users.js'
+export * from './projects.js'
+export * from './sdd-cycle.js'
+export * from './issues.js'
+export * from './agents.js'
+export * from './governance.js'
+export * from './metrics.js'
+export * from './activity.js'
+export * from './onboarding.js'
+export * from './context.js'
