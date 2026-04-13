@@ -7,7 +7,7 @@
 **Version** : 2.0
 **Auteur** : Steeve Evers (Gardien AIAD)
 **Date** : 2026-04-13
-**Statut** : Draft — En cours de validation
+**Statut** : Validé
 **Évolution depuis v1.0** : Intégration du pilier **Context Mesh** (Personal OS + Company OS). Inspiré par les retours terrain et la conférence *"Claude Code au-delà du code"* (AI Product Day, avril 2026).
 
 ---

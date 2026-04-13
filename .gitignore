@@ -7,3 +7,6 @@ dist/
 Thumbs.db
 .turbo/
 coverage/
+
+# AIAD SDD Mode
+# (aucun fichier ignoré — tout est versionné)
