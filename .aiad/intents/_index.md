@@ -6,7 +6,7 @@
 
 | ID | Titre | Auteur | Date | SPECs liées | Statut |
 |----|-------|--------|------|-------------|--------|
-| | | | | | |
+| [INTENT-001](INTENT-001-socle-technique.md) | Socle technique opérationnel | Steeve Evers | 2026-04-13 | — | active |
 
 ## Statuts possibles
 
