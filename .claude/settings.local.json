@@ -8,7 +8,8 @@
       "Bash(claude mcp:*)",
       "mcp__context7__resolve-library-id",
       "mcp__context7__query-docs",
-      "Bash(npx skills:*)"
+      "Bash(npx skills:*)",
+      "Bash(gh pr create:*)"
     ]
   }
 }
