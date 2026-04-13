@@ -1,0 +1,21 @@
+{
+  "name": "aiad-studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "build": "pnpm --recursive run build",
+    "lint": "pnpm --recursive run lint",
+    "test": "pnpm --recursive run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "es5-ext"]
+  }
+}
