@@ -6,7 +6,8 @@
 
 | ID | Titre | Intent parent | SQS | Statut | PR |
 |----|-------|---------------|-----|--------|----|
-| [SPEC-001](SPEC-001-schema-db.md) | Schéma DB — 24 tables Drizzle | INTENT-001 | 4/5 ✓ | done | — |
+| [SPEC-001](archive/SPEC-001-schema-db.md) | Schéma DB — 24 tables Drizzle | INTENT-001 | 4/5 ✓ | archived | — |
+| [SPEC-002](SPEC-002-serveur-express-bootstrap.md) | Serveur Express Bootstrap | INTENT-001 | 4/5 ✓ | done | — |
 
 ## Statuts possibles
 

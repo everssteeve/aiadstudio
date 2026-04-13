@@ -58,4 +58,5 @@ L'implémentation dérive si :
 
 ## SPECs liées
 
-- [ ] [SPEC-001 — Schéma DB 24 tables Drizzle](../specs/SPEC-001-schema-db.md)
+- [x] [SPEC-001 — Schéma DB 24 tables Drizzle](../specs/archive/SPEC-001-schema-db.md) — done
+- [x] [SPEC-002 — Serveur Express Bootstrap](../specs/SPEC-002-serveur-express-bootstrap.md) — done

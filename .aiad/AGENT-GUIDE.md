@@ -95,7 +95,15 @@ Tests : Vitest (unit) + Playwright (E2E). Docker pour infra locale.
 ## LESSONS LEARNED
 
 | Date | Erreur agent | Correction | Impact |
+|------|-------------|------------|--------|
+| 2026-04-13 | SPEC-001 : enum `budgetAction` (24ème) oublié lors de l'exécution — liste longue traitée de façon non exhaustive | Vérifier systématiquement le count d'items attendus vs produits quand la SPEC énumère une liste (`n` enums, `n` tables, etc.) | Drift silencieux en base — budget_action absent du schéma initial |
+| 2026-04-13 | SPEC-001 : nom de fichier migration `0000_tiresome_bug.sql` (auto-généré drizzle-kit) livré sans vérification contre le nom attendu dans la SPEC (`0000_initial_schema.sql`) | Après `drizzle-kit generate`, vérifier que le nom du fichier SQL produit correspond au nom attendu dans la SPEC Output section | Drift de nommage non détecté, cohérence SPEC/code rompue |
 
 ## HUMAN LEARNINGS
 
 | Date | Intention exprimée | Résultat obtenu | Apprentissage |
+|------|-------------------|-----------------|---------------|
+| 2026-04-13 | Drift Lock joué à la fin de SPEC-001 | 2 drifts non détectés : enum manquant + nom migration | Le Drift Check doit être joué activement (commande `/sdd-drift-check`) avec une checklist point par point — pas une relecture rapide. Planifier le Drift Check comme étape obligatoire post-exécution, avant le commit. |
+| 2026-04-13 | Réserve Gate : l'agent devait lire PRD §7.2 pendant l'exécution | Zéro correction manuelle sur les colonnes — pattern validé | Injecter une section externe (ex: PRD §7.2) en réserve dans la SPEC (note "lire offset X") est un pattern efficace. À réutiliser quand une SPEC dépend de données volumineuses hors SPEC. |
+| 2026-04-13 | SPEC-002 : validation TypeScript sur monorepo | `rootDir: "./src"` bloque les imports cross-package | Règle monorepo : `server/tsconfig.json` doit avoir `rootDir: "../"` pour permettre les imports depuis `packages/`. S'assurer dès la création d'un nouveau package. |
+| 2026-04-13 | SPEC-002 : dual-instance drizzle-orm | `drizzle-orm` dans server/ ET packages/db/ → deux builds incompatibles (TS2345) | Règle : `drizzle-orm` est encapsulé dans `@aiad/db`. Le server et les autres packages ne l'importent JAMAIS directement — ils passent par `@aiad/db` qui re-exporte ce dont ils ont besoin (ex: `sql`). |

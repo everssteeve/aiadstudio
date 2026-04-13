@@ -1,2 +1,2 @@
-// Shared validators (Zod schemas)
-// TODO: define validators
+// Shared Zod validators — to be populated by future SPECs
+export {}

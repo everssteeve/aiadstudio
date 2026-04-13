@@ -1,4 +1,5 @@
-import type { Request, Response, NextFunction } from 'express';
+import type { Request, Response, NextFunction } from 'express'
+import { logger } from '../logger.js'
 
 export function errorMiddleware(
   err: Error,
@@ -6,6 +7,6 @@ export function errorMiddleware(
   res: Response,
   _next: NextFunction
 ): void {
-  console.error(err);
-  res.status(500).json({ error: err.message });
+  logger.error({ err }, 'Unhandled error')
+  res.status(500).json({ error: err.message })
 }

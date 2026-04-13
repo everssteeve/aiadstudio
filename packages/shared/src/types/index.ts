@@ -1,2 +1,1 @@
-// Shared TypeScript types
-// TODO: define shared types
+export * from './health.js'

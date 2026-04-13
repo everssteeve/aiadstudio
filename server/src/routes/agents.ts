@@ -1,7 +1,7 @@
-import { Router } from 'express';
+import { Router } from 'express'
 
-export const agentsRouter = Router();
+export const agentsRouter: Router = Router()
 
 agentsRouter.get('/', (_req, res) => {
-  res.json({ data: [] });
-});
+  res.json({ data: [] })
+})

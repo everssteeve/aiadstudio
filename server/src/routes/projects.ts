@@ -1,6 +1,6 @@
-import { Router } from 'express';
+import { Router } from 'express'
 
-export const projectsRouter = Router();
+export const projectsRouter: Router = Router()
 
 projectsRouter.get('/', (_req, res) => {
   res.json({ data: [] });
